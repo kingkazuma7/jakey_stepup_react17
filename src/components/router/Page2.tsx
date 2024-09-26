@@ -1,3 +1,3 @@
 export const Page2 = () => {
-  return <div>Page2</div>;
+  return <h1>Page2です</h1>;
 };
