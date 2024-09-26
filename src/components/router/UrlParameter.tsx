@@ -4,6 +4,7 @@ export const UrlParameter = () => {
   const { id } = useParams() as { id: string };
   const { search } = useLocation(); // ?name=tanaka&age=18
   const query = new URLSearchParams(search);
+  console.log(query.get('name'));
 
   return (
     <>
