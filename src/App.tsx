@@ -1,11 +1,17 @@
-import React from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { Home } from './components/router/Home';
+import { Page1 } from './components/router/Page1';
+import { Page2 } from './components/router/Page2';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      App
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Link to="/">Home</Link>
+        <Home />
+        <Page1 />
+        <Page2 />
+      </div>
+    </BrowserRouter>
   );
 }
-
-export default App;
