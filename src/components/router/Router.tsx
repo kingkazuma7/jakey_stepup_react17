@@ -3,6 +3,7 @@ import { Home } from './Home';
 import { Page1Routes } from './Page1Routes';
 import { Page2Routes } from './Page2Routes';
 import { Page404 } from './Page404';
+import { PageAtomsRoutes } from './PageAtomsRoutes';
 
 export const Router = () => {
   return (
@@ -31,6 +32,22 @@ export const Router = () => {
         render={({ match: { url } }) => (
           <Switch>
             {Page2Routes.map((route, index) => (
+              <Route
+                key={index}
+                exact={route.exact}
+                path={`${url}${route.path}`}
+              >
+                {route.children}
+              </Route>
+            ))}
+          </Switch>
+        )}
+      ></Route>
+      <Route
+        path="/atoms"
+        render={({ match: { url } }) => (
+          <Switch>
+            {PageAtomsRoutes.map((route, index) => (
               <Route
                 key={index}
                 exact={route.exact}

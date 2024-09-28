@@ -10,6 +10,8 @@ export default function App() {
         <Link to="/page1">Page1</Link>
         <br />
         <Link to="/page2">Page2</Link>
+        <br />
+        <Link to="/atoms">Atoms</Link>
         <Router />
       </div>
     </BrowserRouter>
