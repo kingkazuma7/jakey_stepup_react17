@@ -1,6 +1,7 @@
 import { PrimaryButton } from './button/PrimaryButton';
 import { SecondaryButton } from './button/SecondaryButton';
 import { SearchInput } from '../molecules/SearchInput';
+import { UserCard } from '../organism/user/UserCard';
 
 export const Atoms = () => {
   return (
@@ -9,7 +10,7 @@ export const Atoms = () => {
       <PrimaryButton>プライマリー</PrimaryButton>
       <SecondaryButton>セカンダリー</SecondaryButton>
       <br />
-      <SearchInput />
+      <UserCard />
     </>
   );
 };
