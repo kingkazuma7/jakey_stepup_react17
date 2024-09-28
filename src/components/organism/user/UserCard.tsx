@@ -1,16 +1,54 @@
-export const UserCard = () => {
+import styled from 'styled-components';
+import { Card } from '../../atoms/card/Card';
+import { UserIconWithName } from '../../molecules/user/UserIconWithName';
+
+interface UserCardProps {
+  user: {
+    name?: string;
+    email?: string;
+    companyName?: string;
+    website?: string;
+    image?: string;
+    age?: number;
+  };
+}
+
+export const UserCard: React.FC<UserCardProps> = props => {
+  const { user } = props;
+
   return (
     <>
-      <img src="" alt="" />
-      <p>名前</p>
-      <dl>
-        <dt>メール</dt>
-        <dd>dummy1@example.com</dd>
-        <dt>会社名</dt>
-        <dd>株式会社ほげほげ</dd>
-        <dt>WEB</dt>
-        <dd>dummy3@example.com</dd>
-      </dl>
+      <Card>
+        <UserIconWithName
+          image={user.image ?? ''}
+          name={user.name ?? ''}
+          age={user.age ?? 0}
+        />
+        <SDL>
+          <div>
+            <dt>メール</dt>
+            <dd>{user.email ?? ''}</dd>
+          </div>
+          <div>
+            <dt>会社名</dt>
+            <dd>{user.companyName ?? ''}</dd>
+          </div>
+          <div>
+            <dt>WEB</dt>
+            <dd>{user.website ?? ''}</dd>
+          </div>
+        </SDL>
+      </Card>
     </>
   );
 };
+
+const SDL = styled.dl`
+  dt {
+    float: left;
+  }
+  dd {
+    padding-left: 3em;
+    overflow-wrap: break-word;
+  }
+`;

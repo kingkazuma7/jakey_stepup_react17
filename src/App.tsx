@@ -1,5 +1,6 @@
 import { BrowserRouter, Link } from 'react-router-dom';
 import { Router } from './components/router/Router';
+import './style.css';
 
 export default function App() {
   return (
