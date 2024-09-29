@@ -14,11 +14,9 @@ export const SearchInput = () => {
 };
 
 const SContainer = styled.div`
-  border: solid 2px #329eff;
-  border-radius: 20px;
-  padding: 8px;
-  margin: 8px;
+  gap: 1em;
+  margin-bottom: 1em;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `;
