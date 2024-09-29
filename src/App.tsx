@@ -1,6 +1,7 @@
 import { BrowserRouter, Link } from 'react-router-dom';
 import { Router } from './components/router/Router';
 import './style.css';
+import { Router2 } from './components/router/Router2';
 
 export default function App() {
   return (
@@ -14,7 +15,8 @@ export default function App() {
         <br />
         <Link to="/atoms">Atoms</Link>
         <br />
-        <Router />
+        {/* <Router /> */}
+        <Router2 />
       </div>
     </BrowserRouter>
   );
