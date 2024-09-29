@@ -12,5 +12,5 @@ export const Input: React.FC<{ placeholder?: string }> = props => {
 const SInput = styled.input`
   padding: 8px 16px;
   outline: none;
-  width: 50%;
+  width: 100%;
 `;

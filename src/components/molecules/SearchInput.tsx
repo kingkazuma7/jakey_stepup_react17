@@ -15,8 +15,17 @@ export const SearchInput = () => {
 
 const SContainer = styled.div`
   gap: 1em;
-  margin-bottom: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 500px;
+  margin: 0 auto 1em;
+
+  & > *:first-child {
+    flex: 1;
+  }
+
+  & > *:nth-child(2) {
+    width: auto;
+  }
 `;

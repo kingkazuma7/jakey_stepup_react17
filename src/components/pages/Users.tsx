@@ -19,15 +19,22 @@ export const Users = () => {
   return (
     <>
       <h2>Users一覧</h2>
-      <SearchInput />
-      <SUserArea>
-        {users.map(user => (
-          <UserCard key={user.id} user={user} />
-        ))}
-      </SUserArea>
+      <SUserWrapper>
+        <SearchInput />
+        <SUserArea>
+          {users.map(user => (
+            <UserCard key={user.id} user={user} />
+          ))}
+        </SUserArea>
+      </SUserWrapper>
     </>
   );
 };
+
+const SUserWrapper = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+`;
 
 const SUserArea = styled.div`
   padding: 0 100px;
