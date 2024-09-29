@@ -1,7 +1,9 @@
 import { PrimaryButton } from './button/PrimaryButton';
 import { SecondaryButton } from './button/SecondaryButton';
-import { SearchInput } from '../molecules/SearchInput';
 import { UserCard } from '../organism/user/UserCard';
+import { HeaderOnly } from '../templates/HeaderOnly';
+import { BrowserRouter } from 'react-router-dom';
+import { DefaultLayout } from '../templates/DefaultLayout';
 
 const user = {
   name: 'ルフィ',
@@ -16,11 +18,15 @@ const user = {
 export const Atoms = () => {
   return (
     <>
-      <h1>atomsのHomeページです</h1>
-      <PrimaryButton>プライマリー</PrimaryButton>
-      <SecondaryButton>セカンダリー</SecondaryButton>
-      <br />
-      <UserCard user={user} />
+      <BrowserRouter>
+        <DefaultLayout>
+          <h1>atomsのHomeページです</h1>
+          <PrimaryButton>プライマリー</PrimaryButton>
+          <SecondaryButton>セカンダリー</SecondaryButton>
+          <br />
+          <UserCard user={user} />
+        </DefaultLayout>
+      </BrowserRouter>
     </>
   );
 };
