@@ -3,7 +3,17 @@ import { SearchInput } from '../molecules/SearchInput';
 import { UserCard } from '../organism/user/UserCard';
 import { useLocation } from 'react-router-dom';
 
-const users = [...Array(10).keys()].map(val => {
+interface User {
+  id: number;
+  name: string;
+  image: string;
+  companyName: string;
+  email: string;
+  website: string;
+  age: number;
+}
+
+const users: User[] = [...Array(10).keys()].map(val => {
   return {
     id: val + 1, // Start from 1 instead of 0
     name: `ルフィ ${val + 1}`,
@@ -17,8 +27,10 @@ const users = [...Array(10).keys()].map(val => {
 });
 
 export const Users = () => {
-  const { state } = useLocation();
+  const { state }: { state: any } = useLocation();
+  // console.log(state);
 
+  const isAdmin = state ? state.isAdmin : false;
   return (
     <>
       <h2>Users一覧</h2>
@@ -26,7 +38,7 @@ export const Users = () => {
         <SearchInput />
         <SUserArea>
           {users.map(user => (
-            <UserCard key={user.id} user={user} />
+            <UserCard key={user.id} user={user} isAdmin={isAdmin} />
           ))}
         </SUserArea>
       </SUserWrapper>

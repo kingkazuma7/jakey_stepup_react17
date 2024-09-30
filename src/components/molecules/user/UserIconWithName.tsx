@@ -5,12 +5,12 @@ interface UserIconWithNameProps {
   image: string;
   name: string;
   age: number;
+  isAdmin: boolean;
 }
 
 export const UserIconWithName = (props: UserIconWithNameProps) => {
-  const { image, name, age } = props;
+  const { image, name, age, isAdmin } = props;
   const context = useContext(UserContext);
-  console.log(context);
 
   return (
     <>
@@ -18,6 +18,7 @@ export const UserIconWithName = (props: UserIconWithNameProps) => {
         <SImg src={image} width={160} height={160} alt={name} />
         <SName>{name}</SName>
         <SAge>{age}歳</SAge>
+        {isAdmin && <SEdit>編集</SEdit>}
       </SContainer>
     </>
   );
@@ -40,4 +41,9 @@ const SName = styled.p`
 `;
 const SAge = styled.span`
   font-size: 14px;
+`;
+const SEdit = styled.span`
+  cursor: pointer;
+  color: #0011cc;
+  text-decoration: underline;
 `;

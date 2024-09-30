@@ -11,10 +11,11 @@ interface UserCardProps {
     image?: string;
     age?: number;
   };
+  isAdmin?: boolean;
 }
 
 export const UserCard: React.FC<UserCardProps> = props => {
-  const { user } = props;
+  const { user, isAdmin } = props;
 
   return (
     <>
@@ -23,6 +24,7 @@ export const UserCard: React.FC<UserCardProps> = props => {
           image={user.image ?? ''}
           name={user.name ?? ''}
           age={user.age ?? 0}
+          isAdmin={isAdmin ?? false}
         />
         <SDL>
           <div>

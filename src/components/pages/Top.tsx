@@ -10,17 +10,14 @@ export const Top = () => {
     history.push({ pathname: '/users', state: { isAdmin: true } });
   const onClickGeneral = () =>
     history.push({ pathname: '/users', state: { isAdmin: false } });
-  const handleClick = () => {
-    alert('kdkd');
-  };
 
   return (
     <>
       <h1>Topです</h1>
-      {/* <SecondaryButton children="管理者ユーザー" onClick={onClickAdmin} /> */}
+      <SecondaryButton children="管理者ユーザー" onClick={onClickAdmin} />
       <br />
       <br />
-      {/* <SecondaryButton children="一般ユーザー" onClick={onClickGeneral} /> */}
+      <SecondaryButton children="一般ユーザー" onClick={onClickGeneral} />
     </>
   );
 };
