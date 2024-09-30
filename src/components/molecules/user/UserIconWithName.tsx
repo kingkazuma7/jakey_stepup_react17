@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
+import { UserContext } from '../../providers/UserProvider';
 interface UserIconWithNameProps {
   image: string;
   name: string;
@@ -7,6 +9,8 @@ interface UserIconWithNameProps {
 
 export const UserIconWithName = (props: UserIconWithNameProps) => {
   const { image, name, age } = props;
+  const context = useContext(UserContext);
+  console.log(context);
 
   return (
     <>

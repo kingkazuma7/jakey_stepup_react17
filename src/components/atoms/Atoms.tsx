@@ -22,7 +22,7 @@ export const Atoms = () => {
         <DefaultLayout>
           <h1>atomsのHomeページです</h1>
           <PrimaryButton>プライマリー</PrimaryButton>
-          <SecondaryButton>セカンダリー</SecondaryButton>
+          <SecondaryButton onClick={() => {}}>セカンダリー</SecondaryButton>
           <br />
           <UserCard user={user} />
         </DefaultLayout>

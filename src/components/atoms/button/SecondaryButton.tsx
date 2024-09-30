@@ -3,6 +3,7 @@ import { BaseButton } from './BaseButton';
 
 interface SecondaryButtonProps {
   children: React.ReactNode;
+  onClick: () => void;
 }
 
 const StyledButton = styled(BaseButton)`
@@ -10,10 +11,11 @@ const StyledButton = styled(BaseButton)`
 `;
 
 export const SecondaryButton = (props: SecondaryButtonProps) => {
-  const { children } = props;
+  const { children, onClick } = props;
+
   return (
     <>
-      <StyledButton>{children}</StyledButton>
+      <StyledButton onClick={() => onClick()}>{children}</StyledButton>
     </>
   );
 };
