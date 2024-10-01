@@ -2,15 +2,16 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 import { UserContext } from '../../providers/UserProvider';
 interface UserIconWithNameProps {
-  image: string;
-  name: string;
-  age: number;
-  isAdmin: boolean;
+  image?: string;
+  name?: string;
+  age?: number;
+  isAdmin?: boolean;
 }
 
 export const UserIconWithName = (props: UserIconWithNameProps) => {
   const { image, name, age, isAdmin } = props;
-  const context = useContext(UserContext);
+  const context = useContext(UserContext); // グローバルなステート
+  // console.log(context);
 
   return (
     <>

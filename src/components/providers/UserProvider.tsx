@@ -1,8 +1,18 @@
-import { createContext, ReactNode } from 'react';
+import { createContext, ReactNode, useState } from 'react';
 
-export interface UserContextType {}
+export interface UserInfo {
+  isAdmin?: boolean;
+}
 
-export const UserContext = createContext<UserContextType>({});
+export interface UserContextType {
+  userInfo: UserInfo;
+  setUserInfo: React.Dispatch<React.SetStateAction<UserInfo>>;
+}
+
+export const UserContext = createContext<UserContextType>({
+  userInfo: { isAdmin: false },
+  setUserInfo: () => {},
+});
 
 interface UserProviderProps {
   children: ReactNode;
@@ -10,10 +20,12 @@ interface UserProviderProps {
 
 export const UserProvider = (props: UserProviderProps) => {
   const { children } = props;
-  const contextName = 'ほげ'; // グローバルなステート
+
+  const [userInfo, setUserInfo] = useState<UserInfo>({ isAdmin: false });
+
   return (
     <>
-      <UserContext.Provider value={{ contextName }}>
+      <UserContext.Provider value={{ userInfo, setUserInfo }}>
         {children}
       </UserContext.Provider>
     </>
