@@ -3,6 +3,7 @@ import { Top } from '../pages/Top';
 import { Users } from '../pages/Users';
 import { DefaultLayout } from '../templates/DefaultLayout';
 import { HeaderOnly } from '../templates/HeaderOnly';
+import { FetchData } from '../fetchData/FetchData';
 
 export const Router2 = () => {
   return (
@@ -17,6 +18,11 @@ export const Router2 = () => {
           <Route path="/users">
             <HeaderOnly>
               <Users />
+            </HeaderOnly>
+          </Route>
+          <Route path="/fetchData">
+            <HeaderOnly>
+              <FetchData />
             </HeaderOnly>
           </Route>
         </Switch>

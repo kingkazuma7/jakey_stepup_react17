@@ -22,6 +22,9 @@ export const Top = () => {
     // history.push({ pathname: '/users', state: { isAdmin: false } });
     // history.push({ pathname: '/users', state: { isAdmin: false } });
   };
+  const onClickFetchData = () => {
+    history.push('./fetchData');
+  };
 
   return (
     <>
@@ -30,6 +33,9 @@ export const Top = () => {
       <br />
       <br />
       <SecondaryButton children="一般ユーザー" onClick={onClickGeneral} />
+      <br />
+      <br />
+      <SecondaryButton children="フェッチデータ" onClick={onClickFetchData} />
     </>
   );
 };
