@@ -28,6 +28,9 @@ export const Top = () => {
   const onClickTextData = () => {
     history.push('./sampleText');
   };
+  const onClickUserProfile = () => {
+    history.push('./userProfile');
+  };
 
   return (
     <>
@@ -42,6 +45,12 @@ export const Top = () => {
       <br />
       <br />
       <SecondaryButton children="テキスト" onClick={onClickTextData} />
+      <br />
+      <br />
+      <SecondaryButton
+        children="ユーザープロフィール"
+        onClick={onClickUserProfile}
+      />
     </>
   );
 };

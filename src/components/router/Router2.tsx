@@ -5,6 +5,14 @@ import { DefaultLayout } from '../templates/DefaultLayout';
 import { HeaderOnly } from '../templates/HeaderOnly';
 import { FetchData } from '../sample/fetchData/FetchData';
 import { Text } from '../sample/Text/Text';
+import { UserProfile } from '../sample/UserProfile/UserProfile';
+import { User } from '../sample/types/user';
+
+const user: User = {
+  // 別ファイルでオブジェクトで型定義しているを呼び出し
+  name: 'ゾロ',
+  hobbies: ['剣士', '筋トレ'],
+};
 
 export const Router2 = () => {
   return (
@@ -29,6 +37,11 @@ export const Router2 = () => {
           <Route path="/sampleText">
             <HeaderOnly>
               <Text color="red" fontSize="2rem" />
+            </HeaderOnly>
+          </Route>
+          <Route path="/userProfile">
+            <HeaderOnly>
+              <UserProfile user={user} />
             </HeaderOnly>
           </Route>
         </Switch>
