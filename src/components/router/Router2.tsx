@@ -4,6 +4,7 @@ import { Users } from '../pages/Users';
 import { DefaultLayout } from '../templates/DefaultLayout';
 import { HeaderOnly } from '../templates/HeaderOnly';
 import { FetchData } from '../sample/fetchData/FetchData';
+import { Text } from '../sample/Text/Text';
 
 export const Router2 = () => {
   return (
@@ -23,6 +24,11 @@ export const Router2 = () => {
           <Route path="/fetchData">
             <HeaderOnly>
               <FetchData />
+            </HeaderOnly>
+          </Route>
+          <Route path="/sampleText">
+            <HeaderOnly>
+              <Text color="red" fontSize="2rem" />
             </HeaderOnly>
           </Route>
         </Switch>

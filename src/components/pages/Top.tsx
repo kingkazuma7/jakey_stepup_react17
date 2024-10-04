@@ -25,6 +25,9 @@ export const Top = () => {
   const onClickFetchData = () => {
     history.push('./fetchData');
   };
+  const onClickTextData = () => {
+    history.push('./sampleText');
+  };
 
   return (
     <>
@@ -36,6 +39,9 @@ export const Top = () => {
       <br />
       <br />
       <SecondaryButton children="フェッチデータ" onClick={onClickFetchData} />
+      <br />
+      <br />
+      <SecondaryButton children="テキスト" onClick={onClickTextData} />
     </>
   );
 };
