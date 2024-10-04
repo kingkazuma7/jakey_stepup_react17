@@ -3,7 +3,7 @@ import { Top } from '../pages/Top';
 import { Users } from '../pages/Users';
 import { DefaultLayout } from '../templates/DefaultLayout';
 import { HeaderOnly } from '../templates/HeaderOnly';
-import { FetchData } from '../fetchData/FetchData';
+import { FetchData } from '../sample/fetchData/FetchData';
 
 export const Router2 = () => {
   return (
