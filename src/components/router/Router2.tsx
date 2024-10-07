@@ -9,11 +9,19 @@ import { UserProfile } from '../sample/UserProfile/UserProfile';
 import { User } from '../sample/types/user';
 import { UserCard } from '../organism/user/UserCard';
 import { UserCardSample } from '../sample/UserCardSample/UserCardSample';
+import { userProfileSample } from '../sample/types/userProfileSample';
 
 const user: User = {
   // 別ファイルでオブジェクトで型定義しているを呼び出し
   name: 'ゾロ',
   hobbies: ['剣士', '筋トレ'],
+};
+
+const user2 = {
+  id: 1,
+  name: 'ゾロ',
+  email: 'zoro@test.com',
+  address: 'ADDRESS',
 };
 
 export const Router2 = () => {
@@ -48,7 +56,7 @@ export const Router2 = () => {
           </Route>
           <Route path="/userCardSample">
             <HeaderOnly>
-              <UserCardSample />
+              <UserCardSample user2={user2} />{' '}
             </HeaderOnly>
           </Route>
         </Switch>
