@@ -7,6 +7,8 @@ import { FetchData } from '../sample/fetchData/FetchData';
 import { Text } from '../sample/Text/Text';
 import { UserProfile } from '../sample/UserProfile/UserProfile';
 import { User } from '../sample/types/user';
+import { UserCard } from '../organism/user/UserCard';
+import { UserCardSample } from '../sample/UserCardSample/UserCardSample';
 
 const user: User = {
   // 別ファイルでオブジェクトで型定義しているを呼び出し
@@ -42,6 +44,11 @@ export const Router2 = () => {
           <Route path="/userProfile">
             <HeaderOnly>
               <UserProfile user={user} />
+            </HeaderOnly>
+          </Route>
+          <Route path="/userCardSample">
+            <HeaderOnly>
+              <UserCardSample />
             </HeaderOnly>
           </Route>
         </Switch>

@@ -31,6 +31,9 @@ export const Top = () => {
   const onClickUserProfile = () => {
     history.push('./userProfile');
   };
+  const onClickUserCardProfile = () => {
+    history.push('./userCardSample');
+  };
 
   return (
     <>
@@ -50,6 +53,12 @@ export const Top = () => {
       <SecondaryButton
         children="ユーザープロフィール"
         onClick={onClickUserProfile}
+      />
+      <br />
+      <br />
+      <SecondaryButton
+        children="ユーザーカードプロフィール（カスタムフック未使用）"
+        onClick={onClickUserCardProfile}
       />
     </>
   );
