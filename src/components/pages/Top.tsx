@@ -34,6 +34,9 @@ export const Top = () => {
   const onClickUserCardProfile = () => {
     history.push('./userCardSample');
   };
+  const onClickChakuraUI = () => {
+    history.push('./ChakuraApp');
+  };
 
   return (
     <>
@@ -59,6 +62,12 @@ export const Top = () => {
       <SecondaryButton
         children="ユーザーカードプロフィール（カスタムフック未使用）"
         onClick={onClickUserCardProfile}
+      />
+      <br />
+      <br />
+      <SecondaryButton
+        children="実践APP ChakuraUI"
+        onClick={onClickChakuraUI}
       />
     </>
   );

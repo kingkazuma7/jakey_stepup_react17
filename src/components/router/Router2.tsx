@@ -10,9 +10,9 @@ import { User } from '../sample/types/user';
 import { UserCard } from '../organism/user/UserCard';
 import { UserCardSample } from '../sample/UserCardSample/UserCardSample';
 import { userProfileSample } from '../sample/types/userProfileSample';
+import { ChakuraApp } from '../sample/ChakuraApp/ChakuraApp'; // Assuming this exists
 
 const user: User = {
-  // 別ファイルでオブジェクトで型定義しているを呼び出し
   name: 'ゾロ',
   hobbies: ['剣士', '筋トレ'],
 };
@@ -57,6 +57,11 @@ export const Router2 = () => {
           <Route path="/userCardSample">
             <HeaderOnly>
               <UserCardSample user2={user2} />{' '}
+            </HeaderOnly>
+          </Route>
+          <Route path="/ChakuraApp">
+            <HeaderOnly>
+              <ChakuraApp />
             </HeaderOnly>
           </Route>
         </Switch>
